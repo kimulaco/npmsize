@@ -1,5 +1,7 @@
 <template>
-  <table>
+  <table
+    class="c-table-result table"
+  >
     <tbody>
       <tr
         v-for="(value, key) in data"
@@ -25,4 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.c-table-result {
+  width: 100%;
+}
 </style>

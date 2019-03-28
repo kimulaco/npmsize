@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'TableResult',
+  name: 'Loading',
   props: {
     text: {
       type: String,

@@ -1,37 +1,28 @@
 <template>
-  <section class="section">
-    <form @submit.prevent="onSubmitForm">
-      <b-field label="Package">
-        <b-input
-          v-model="keyword"
-          autofocus
-        />
-      </b-field>
-
-      <button
-        v-if="!isLoading"
-        type="submit"
-        class="button"
-      >Search</button>
-
-      <loading v-if="isLoading" />
-    </form>
+  <div>
+    <form-search
+      v-model="keyword"
+      :loading="isLoading"
+      :autofocus="true"
+      @submit="onSubmitForm"
+    />
 
     <table-result
+      v-if="!isNoResult"
       :data="result"
     />
-  </section>
+  </div>
 </template>
 
 <script>
 import axios from 'axios'
-import Loading from '@/components/Loading'
-import TableResult from '@/components/TableResult'
+import FormSearch from '@/components/modules/FormSearch'
+import TableResult from '@/components/modules/TableResult'
 
 export default {
-  name: 'HomePage',
+  name: 'PageIndex',
   components: {
-    Loading,
+    FormSearch,
     TableResult
   },
   data() {
@@ -41,13 +32,16 @@ export default {
       result: {}
     }
   },
+  computed: {
+    isNoResult() {
+      return Object.keys(this.result).length <= 0
+    }
+  },
   methods: {
     async onSubmitForm() {
       this.isLoading = true
 
       const { data } = await axios.get(`/api/size/${this.keyword}`)
-
-      console.log(data)
 
       this.result = data
       this.isLoading = false

@@ -14,13 +14,22 @@ module.exports = {
     ]
   },
   loading: { color: '#fff' },
-  css: [],
+  css: [
+    '@/assets/scss/base.scss'
+  ],
   plugins: [],
   modules: [
+    '@nuxtjs/style-resources',
     '@nuxtjs/axios',
     'nuxt-buefy',
     '@nuxtjs/pwa'
   ],
+  styleResources: {
+    sass: [
+      '@/assets/scss/_define.scss',
+      '@/assets/scss/_mixin.scss'
+    ]
+  },
   srcDir: 'client/',
   build: {
     extend(config, ctx) {
