@@ -8,19 +8,30 @@
         :key="key"
       >
         <th>{{ key }}</th>
-        <td>{{ value }}</td>
+        <td>{{ getScreanValue(value) }}</td>
       </tr>
     </tbody>
   </table>
 </template>
 
 <script>
+const numberFormat = new Intl.NumberFormat()
+
 export default {
   name: 'TableResult',
   props: {
     data: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    getScreanValue(value) {
+      if (isNaN(value)) {
+        return value
+      }
+
+      return numberFormat.format(value)
     }
   }
 }
