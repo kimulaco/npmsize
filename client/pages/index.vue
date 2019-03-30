@@ -4,6 +4,7 @@
       v-model="keyword"
       :loading="isLoading"
       :autofocus="true"
+      placeholder="package-name..."
       input-title="Package name"
       @submit="onSubmitForm"
     />

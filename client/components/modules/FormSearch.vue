@@ -9,6 +9,7 @@
       <b-input
         v-model="internalValue"
         :title="inputTitle"
+        :placeholder="placeholder"
         :autofocus="autofocus"
         @input="onInput"
       />
@@ -25,13 +26,17 @@
 
 <script>
 export default {
-  name: 'FormResult',
+  name: 'FormSearch',
   props: {
     autofocus: {
       type: Boolean,
       default: false
     },
     value: {
+      type: String,
+      default: ''
+    },
+    placeholder: {
       type: String,
       default: ''
     },
