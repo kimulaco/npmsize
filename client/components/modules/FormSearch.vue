@@ -16,7 +16,7 @@
       <button
         v-show="!loading"
         type="submit"
-        class="c-form-search__submit-button button"
+        class="c-form-search__submit-button button is-primary"
       >{{ submitText }}</button>
       <loading
         v-show="loading"
