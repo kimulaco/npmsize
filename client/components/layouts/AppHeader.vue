@@ -1,7 +1,7 @@
 <template>
   <header class="l-app-header">
     <div class="l-app-header__inner">
-      <h1 class="l-app-header__title">npms</h1>
+      <h1 class="l-app-header__title">npmsize</h1>
     </div><!-- /.l-app-header__inner -->
   </header><!-- /.l-app-header -->
 </template>

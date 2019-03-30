@@ -2,7 +2,7 @@
   <footer class="l-app-footer">
     <div class="l-app-footer__inner">
       <p class="l-app-footer__copyright">
-        <small class="l-app-footer__copyright-text">&copy; 2019 npms.</small>
+        <small class="l-app-footer__copyright-text">&copy; 2019 npmsize.</small>
       </p><!-- /.l-app-footer__copyright -->
     </div><!-- /.l-app-footer__inner -->
   </footer><!-- /.l-app-footer -->
