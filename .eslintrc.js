@@ -12,9 +12,10 @@ module.exports = {
     'plugin:nuxt/recommended'
   ],
   rules: {
-    'no-console': 'off',
-    'vue/singleline-html-element-content-newline': 'off',
-    'vue/multiline-html-element-content-newline': 'off',
-    'nuxt/no-cjs-in-config': 'off'
+    'no-console': 0,
+    'vue/no-use-v-if-with-v-for': 0,
+    'vue/singleline-html-element-content-newline': 0,
+    'vue/multiline-html-element-content-newline': 0,
+    'nuxt/no-cjs-in-config': 0
   }
 }

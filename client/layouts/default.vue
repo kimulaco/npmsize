@@ -14,6 +14,7 @@ import AppMain from '@/components/layouts/AppMain'
 import AppFooter from '@/components/layouts/AppFooter'
 
 export default {
+  name: 'LayoutDefault',
   components: {
     AppHeader,
     AppMain,

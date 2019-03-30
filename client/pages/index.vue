@@ -30,12 +30,12 @@ export default {
     return {
       isLoading: false,
       keyword: '',
-      result: {}
+      result: []
     }
   },
   computed: {
     isNoResult() {
-      return Object.keys(this.result).length <= 0
+      return this.result.length <= 0
     }
   },
   methods: {
@@ -43,6 +43,8 @@ export default {
       this.isLoading = true
 
       const { data } = await axios.get(`/api/size/${this.keyword}`)
+
+      console.log(data)
 
       this.result = data
       this.isLoading = false
