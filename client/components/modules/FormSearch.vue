@@ -8,32 +8,24 @@
     >
       <b-input
         v-model="internalValue"
+        :title="inputTitle"
         :autofocus="autofocus"
         @input="onInput"
       />
-    </b-field>
+    </b-field><!-- /.c-form-search__input -->
     <div class="c-form-search__submit">
       <button
-        v-show="!loading"
+        :disabled="loading"
         type="submit"
         class="c-form-search__submit-button button is-primary"
       >{{ submitText }}</button>
-      <loading
-        v-show="loading"
-        :text="loadingText"
-      />
-    </div>
-  </form>
+    </div><!-- /.c-form-search__submit -->
+  </form><!-- /.c-form-search -->
 </template>
 
 <script>
-import Loading from '@/components/modules/Loading'
-
 export default {
   name: 'FormResult',
-  components: {
-    Loading
-  },
   props: {
     autofocus: {
       type: Boolean,
@@ -43,13 +35,13 @@ export default {
       type: String,
       default: ''
     },
+    inputTitle: {
+      type: String,
+      default: ''
+    },
     loading: {
       type: Boolean,
       default: false
-    },
-    loadingText: {
-      type: String,
-      default: ''
     },
     submitText: {
       type: String,

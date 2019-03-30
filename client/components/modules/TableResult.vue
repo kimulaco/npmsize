@@ -2,13 +2,14 @@
   <table
     class="c-table-result table"
   >
-    <tbody>
+    <tbody class="c-table-result__body">
       <tr
         v-for="(value, key) in data"
         :key="key"
+        class="c-table-result__tr"
       >
-        <th>{{ key }}</th>
-        <td>{{ getScreanValue(value) }}</td>
+        <th class="c-table-result__heading">{{ key }}</th>
+        <td class="c-table-result__data">{{ getScreanValue(value) }}</td>
       </tr>
     </tbody>
   </table>
@@ -40,5 +41,11 @@ export default {
 <style lang="scss" scoped>
 .c-table-result {
   width: 100%;
+  margin: 24px 0 0;
+  table-layout: fixed;
+
+  &__heading {
+    width: 160px;
+  }
 }
 </style>
