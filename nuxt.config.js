@@ -20,6 +20,7 @@ module.exports = {
   plugins: [],
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/google-analytics',
     '@nuxtjs/axios',
     'nuxt-buefy',
     '@nuxtjs/pwa'
@@ -29,6 +30,10 @@ module.exports = {
       '@/assets/scss/_define.scss',
       '@/assets/scss/_mixin.scss'
     ]
+  },
+  googleAnalytics: {
+    id: 'UA-137344422-1',
+    dev: false
   },
   srcDir: 'client/',
   build: {
